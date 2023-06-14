@@ -279,36 +279,26 @@
     </div>
 
     <header class="header">
-        <span class="header-first">ВСЕ, ЧТО ВЫ ХОТЕЛИ ЗНАТЬ О</span>
-        <div class="sex">
-            <div class="sex-container">
-                <img id="sex2" src="{{asset 'images/sex2.png'}}" alt="">
-            </div>
-            <div class="sex-container" id="sex1">
-                <img src="{{asset 'images/sex1.png'}}" alt="">
-            </div>
-        </div>
-        <div class="health">
-            <div class="health-image">
-                <div class="health-container">
-                    <img src="/assets/images/health2.png" alt="">
-                </div>
-                <div class="health-container" id="health1">
-                    <img src="/assets/images/health1.png" alt="">
+        <h1 class="header-title">Все, что вы хотели знать о</h1>
+        <div class="desktop-only">
+            <img id="header__sex" src="{{asset 'images/sex.svg'}}" alt="Сексе">
+            <div class="header__health-wrapper">
+                <img class="header__health-image" src="{{asset 'images/health.svg'}}" alt="Здоровье">
+                <div class="header__health-column">
+                    <span class="header__health-relationship">Отноше<br>ниях</span>
+                    <span class="header__health-answer">Быстрый ответ</span>
                 </div>
             </div>
-            <div class="health-right">
-                <span class="f">ОТНОШЕ<br>НИЯХ</span>
-                <span class="s">БЫСТРЫЙ<br>ОТВЕТ</span>
-            </div>
         </div>
-        <div class="mobile header-mobile">
-            <img src="{{asset 'images/sex3.png'}}" alt="">
-            <img src="{{asset 'images/health3.png'}}" alt="">
-            <img src="{{asset 'images/rel.png'}}" alt="">
-
+        <div class="mobile-only">
+            <div class="header__mobile">
+                <img src="{{asset 'images/sex-2.svg'}}" alt="">
+                <img src="{{asset 'images/health-3.svg'}}" alt="">
+                <img src="{{asset 'images/relationship.svg'}}" alt="">
+            </div>
         </div>
         <a target="_blank" href="https://jent.men" class="spec js-spec-watcher">СПЕЦИАЛИСТАМ</a>
+
     </header>
 
     <section class="posts">
@@ -517,7 +507,8 @@
         </div>
     </section>
     <div class="last-spec">
-        <a target="_blank" href="https://jent.men" class="spec js-spec-watcher" data-micromodal-trigger="modal-1">СПЕЦИАЛИСТАМ</a>
+        <a target="_blank" href="https://jent.men" class="spec js-spec-watcher"
+            data-micromodal-trigger="modal-1">СПЕЦИАЛИСТАМ</a>
     </div>
     <div class="gh-about-content-inner" style="display:none;">
         {{#if @custom.primary_header}}

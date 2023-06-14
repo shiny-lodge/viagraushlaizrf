@@ -1,14 +1,15 @@
-
-  
 :root {
     --orange: #FF5D02;
     --ind: calc(1vw + 1vh);
 }
-body, html {
+
+body,
+html {
     height: 100%;
     width: 100vw;
     background: #000;
     overflow-x: hidden;
+    font-family: "loos-compressed", sans-serif;
 }
 
 * {
@@ -22,7 +23,7 @@ a {
     color: unset
 }
 
-
+/* redundant */
 .mobile {
     display: none;
 }
@@ -50,78 +51,33 @@ a {
     width: min(90%, 1800px)
 }
 
+.mobile-only {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .mobile-only {
+        display: block;
+    }
+    .desktop-only {
+        display: none;
+    }
+}
+
+/* header */
+
 .header {
     height: 100%;
     padding: 0 40px;
     width: min(90vw, 1800px);
-    position:relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
 }
 
-.header-inner {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sex { 
-    position: relative;
-    height: 250px;
-    width: 100%;
-}
-
-/* .sex, .health {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
-.sex-container {
-    background: #000;
-    position:absolute;
-    height: 250px;
-    width: 100%;
-    left:0;
-    transition: opacity .5s ease-in-out;
-}  
-
-
-.sex-container:first-child img {
-    width: 100%;
-    height: 100%
-}
-
-.sex-container:last-child img {
-    width: 1350px;
-    height: 100%
-}
-
-.header img {
-    background: #000;
-    position:absolute;
-    left:0;
-    width: 100%;
-    -webkit-transition: opacity .5s ease-in-out;
-    -moz-transition: opacity .5s ease-in-out;
-    -o-transition: opacity .5s ease-in-out;
-    transition: opacity .5s ease-in-out;
-  }
-  
-  .header:hover #sex1 {
-    opacity:0;
-  }
-
-  .header:hover #health1 {
-    opacity:0;
-  }
-
-  
-
-.header-first {
+.header-title {
     font-family: "loos-extended", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -129,6 +85,60 @@ a {
     color: var(--orange);
     font-size: 32px;
     margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+.header__sex {
+    width: 100%;
+}
+
+.header__health-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 76px;
+    margin-top: 60px;
+}
+
+.header__health-image {
+    flex: 1;
+    width: 0;
+    height: fit-content;
+}
+
+.header__health-column {
+    width: min-content;
+}
+
+.header__health-relationship {
+    font-family: "loos-compressed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7.5rem;
+    color: white;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1100px) {
+    .header__health-relationship {
+        font-size: 3.5rem;
+    }
+}
+
+.header__health-answer {
+    font-family: "loos-extended", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    color: var(--orange);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.header__mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
 }
 
 .health {
@@ -141,10 +151,10 @@ a {
 
 .health-container {
     background: #000;
-    position:absolute;
+    position: absolute;
     height: 360px;
     width: min(1060px, 55vw);
-    left:0;
+    left: 0;
     transition: opacity .5s ease-in-out;
 }
 
@@ -164,22 +174,6 @@ a {
     flex-direction: column;
 }
 
-.health-right .f {
-    font-family: "loos-compressed", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 7.5rem;
-    color: white;
-}
-
-.health-right .s {
-    font-family: "loos-extended", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 2rem;
-    color: var(--orange);
-}
-
 .index {
     display: flex;
     gap: 30px;
@@ -189,7 +183,8 @@ a {
 
 }
 
-.index-f, .index-s {
+.index-f,
+.index-s {
     font-size: 224px;
     font-family: "loos-compressed", sans-serif;
 }
@@ -213,15 +208,15 @@ a {
 
 .index .index-container {
     background: #000;
-    position:absolute;
-    left:0;
+    position: absolute;
+    left: 0;
     width: 100%;
     height: 400px;
     -webkit-transition: opacity .5s ease-in-out;
     -moz-transition: opacity .5s ease-in-out;
     -o-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out;
-  }
+}
 
 .index-l {
     color: var(--orange);
@@ -241,7 +236,8 @@ a {
     text-transform: uppercase;
 }
 
-.test, .grade {
+.test,
+.grade {
     margin: 0 auto;
 
     width: min(1350px, 90vw);
@@ -263,7 +259,7 @@ a {
     width: 275px;
     background: #000;
     height: 46px;
-    margin-top: 65px ;
+    margin-top: 65px;
     cursor: pointer;
     align-self: center;
 }
@@ -352,7 +348,8 @@ a {
     text-transform: uppercase;
 }
 
-.grade-t, .grade-n {
+.grade-t,
+.grade-n {
     display: flex;
 }
 
@@ -369,7 +366,8 @@ a {
     align-self: flex-end;
 }
 
-.grade-r, .grade-l {
+.grade-r,
+.grade-l {
     display: flex;
     height: 210px;
     justify-content: space-between;
@@ -393,7 +391,8 @@ a {
     line-height: 150px;
 }
 
-.grade-l-t, .grade-r-t {
+.grade-l-t,
+.grade-r-t {
     color: var(--orange);
     transition: .4s all;
     opacity: 0;
@@ -402,11 +401,13 @@ a {
     font-family: "loos-extended", sans-serif;
 }
 
-.grade-c:hover .grade-l-t, .grade-c:hover .grade-r-t {
+.grade-c:hover .grade-l-t,
+.grade-c:hover .grade-r-t {
     opacity: 1;
 }
 
-.grade-anim .grade-l-t, .grade-anim .grade-r-t {
+.grade-anim .grade-l-t,
+.grade-anim .grade-r-t {
     opacity: 1;
     transition-delay: 400ms;
 }
@@ -541,7 +542,7 @@ a {
 
 .modal {
     background-color: white;
-    
+
     border-radius: 20px;
 }
 
@@ -550,6 +551,7 @@ a {
     flex-direction: column;
     height: 700px;
 }
+
 .modal span {
     font-size: 20px;
     color: black;
@@ -710,7 +712,17 @@ input[type="radio"]:checked+label {
     grid-column: 1/3;
 }
 
-.gh-content p, .gh-content li, .gh-content a, .gh-article-title, .gh-content h3, .gh-content h4, .gh-content h5, .gh-content h2, .gh-content h1, .gh-content blockquote, .gh-navigation-link {
+.gh-content p,
+.gh-content li,
+.gh-content a,
+.gh-article-title,
+.gh-content h3,
+.gh-content h4,
+.gh-content h5,
+.gh-content h2,
+.gh-content h1,
+.gh-content blockquote,
+.gh-navigation-link {
     color: white;
 }
 
@@ -732,7 +744,8 @@ input[type="radio"]:checked+label {
         justify-content: flex-start;
     }
 
-    .index, .grade {
+    .index,
+    .grade {
         padding-left: 60px;
         margin: 0 auto;
         width: 100%;
@@ -745,6 +758,7 @@ input[type="radio"]:checked+label {
     .health {
         width: 100vw;
     }
+
     .sex {
         min-height: 250px;
     }
@@ -761,7 +775,8 @@ input[type="radio"]:checked+label {
         width: 100%;
     }
 
-    .index-f, .index-s {
+    .index-f,
+    .index-s {
         font-size: calc(var(--ind) * 8);
         line-height: calc(var(--ind) * 8);
 
@@ -773,14 +788,15 @@ input[type="radio"]:checked+label {
         font-size: 14px;
     }
 
-    
-    .sex-container, .sex  {
+
+    .sex-container,
+    .sex {
         height: 120px;
     }
 
     .health-right .f {
         font-size: 6rem;
-    }        
+    }
 
     .health-right .s {
         font-size: 1.5rem;
@@ -791,19 +807,26 @@ input[type="radio"]:checked+label {
     }
 
     .posts-grid {
-        grid-template-columns: repeat(auto-fit,minmax(min(20rem,100%),1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
     }
 
     .post:nth-child(4) {
         grid-column: auto;
     }
 
-    
+
 }
 
 @media screen and (max-width: 900px) {
 
-    .gh-content p, .gh-content li, .gh-content a, .gh-content h2, .gh-content h4, .gh-content h5, .gh-content blockquote, .gh-navigation-link {
+    .gh-content p,
+    .gh-content li,
+    .gh-content a,
+    .gh-content h2,
+    .gh-content h4,
+    .gh-content h5,
+    .gh-content blockquote,
+    .gh-navigation-link {
         font-size: 1.25rem !important;
     }
 
@@ -839,17 +862,13 @@ input[type="radio"]:checked+label {
         margin-bottom: 30px;
     }
 
-    .sex, .health {
+    .sex,
+    .health {
         display: none;
     }
 
     .mobile {
         display: flex;
-    }
-
-    .header-mobile {
-        flex-direction: column;
-        gap: 28px;
     }
 
     .spec {
@@ -863,8 +882,9 @@ input[type="radio"]:checked+label {
     .header .spec {
         margin-top: 180px;
     }
-    
-    .index-f, .index-s {
+
+    .index-f,
+    .index-s {
         font-size: calc(var(--ind) * 4.5);
         line-height: calc(var(--ind) * 4.5);
         letter-spacing: -0.01em;
@@ -941,7 +961,8 @@ input[type="radio"]:checked+label {
         padding: 25px 28px 18px;
     }
 
-    .modal-header button, .modal-header button svg {
+    .modal-header button,
+    .modal-header button svg {
         width: 16px;
         height: 16px;
     }
@@ -982,25 +1003,29 @@ input[type="radio"]:checked+label {
         font-weight: 300;
         line-height: 20px;
     }
+
     .grade-c:hover .grade-b-n {
         font-size: 160px;
         line-height: 90px;
     }
 
-    .grade-l-t, .grade-r-t {
+    .grade-l-t,
+    .grade-r-t {
         font-size: 24px;
         line-height: 30px;
     }
 
-    .grade-r, .grade-l {
+    .grade-r,
+    .grade-l {
         height: 140px;
     }
 
-    .grade-anim .grade-l-t, .grade-anim .grade-r-t {
+    .grade-anim .grade-l-t,
+    .grade-anim .grade-r-t {
         opacity: 1;
         transition-delay: 400ms;
     }
-    
+
     .grade-anim .grade-b-n {
         font-size: 160px;
         line-height: 90px;
@@ -1017,19 +1042,19 @@ input[type="radio"]:checked+label {
         width: 71px;
         height: 12px;
     }
-    
+
     .stat-2 {
         background: #FFBB02;
         width: 71px;
         height: 46px;
     }
-    
+
     .stat-3 {
         background: #F8A207;
         width: 71px;
         height: 51px;
     }
-    
+
     .stat-4 {
         background: var(--orange);
         width: 71px;
@@ -1055,23 +1080,23 @@ input[type="radio"]:checked+label {
     .stat-n {
         font-size: 16px;
     }
-    
+
     .stat:hover .stat-1 {
         height: 41px;
     }
-    
+
     .stat:hover .stat-2 {
         height: 79px;
     }
-    
+
     .stat:hover .stat-3 {
         height: 87px;
     }
-    
+
     .stat:hover .stat-4 {
         height: 222px;
     }
-    
+
     .stat:hover .stat-n {
         opacity: 1
     }
@@ -1080,27 +1105,27 @@ input[type="radio"]:checked+label {
         transition-delay: 600ms;
         opacity: 1;
     }
-    
+
     .stat-anim .stat-1 {
         transition-delay: 600ms;
         height: 41px;
     }
-    
+
     .stat-anim .stat-2 {
         transition-delay: 600ms;
         height: 79px;
     }
-    
+
     .stat-anim .stat-3 {
         transition-delay: 600ms;
         height: 87px;
     }
-    
+
     .stat-anim .stat-4 {
         transition-delay: 600ms;
         height: 222px;
     }
-    
+
     .stat-anim .stat-n {
         transition-delay: 600ms;
         opacity: 1;
@@ -1125,6 +1150,7 @@ input[type="radio"]:checked+label {
     font-family: Manrope;
     src: url('../fonts/Manrope[wght].woff2') format('woff2');
 }
+
 .email-form {
     margin: 184px auto 0;
     max-width: 1546px;
@@ -1144,11 +1170,13 @@ input[type="radio"]:checked+label {
     position: relative;
     border-radius: 18px;
 }
+
 .email-form__text-wrapper {
     text-transform: uppercase;
     color: white;
     margin-top: 125px;
 }
+
 .email-form__title {
     margin: 0;
     font-size: 32px;
@@ -1157,12 +1185,14 @@ input[type="radio"]:checked+label {
     font-weight: 400;
     color: white;
 }
+
 .email-form__desc {
     margin: 0;
     font-size: 16px;
     line-height: 1.2;
     max-width: 306px;
 }
+
 .email-form__form-wrapper {
     color: white;
     display: flex;
@@ -1170,6 +1200,7 @@ input[type="radio"]:checked+label {
     padding-top: 220px;
     height: 100%;
 }
+
 .email-form__input {
     border: none;
     outline: none;
@@ -1177,11 +1208,12 @@ input[type="radio"]:checked+label {
     padding: 22px 30px 18px;
     background: transparent;
     border: 1px solid white;
-    font-family: loos-extended,sans-serif;
+    font-family: loos-extended, sans-serif;
     color: white;
     font-size: 16px;
     line-height: 1.2;
 }
+
 .email-form__email-label {
     font-weight: 400;
     font-size: 23px;
@@ -1190,18 +1222,21 @@ input[type="radio"]:checked+label {
     display: flex;
     align-items: center;
 }
+
 .email-form__input::placeholder {
-    font-family: loos-extended,sans-serif;
+    font-family: loos-extended, sans-serif;
     color: white;
     opacity: .5;
     font-size: 16px;
     line-height: 1.2;
 }
+
 .email-form__checkbox-wrapper {
     margin-top: 34px;
     display: flex;
     align-items: center;
 }
+
 .email-form__button {
     margin-top: 98px;
     color: #FF5D02;
@@ -1212,11 +1247,12 @@ input[type="radio"]:checked+label {
     line-height: 1;
     width: 240px;
     text-transform: uppercase;
-    font-family: loos-extended,sans-serif;
+    font-family: loos-extended, sans-serif;
     border: none;
     outline: none;
     cursor: pointer;
 }
+
 .email-form__lips {
     width: 538px;
     height: 194px;
@@ -1229,6 +1265,7 @@ input[type="radio"]:checked+label {
     position: absolute;
     z-index: 2;
 }
+
 .email-form__eighteen {
     width: 420px;
     height: 240px;
@@ -1241,6 +1278,7 @@ input[type="radio"]:checked+label {
     position: absolute;
     z-index: 1;
 }
+
 .email-form__gender {
     width: 163px;
     height: 143px;
@@ -1253,6 +1291,7 @@ input[type="radio"]:checked+label {
     position: absolute;
     z-index: 1;
 }
+
 .email-form__consent-fake-checkbox {
     width: 27px;
     height: 27px;
@@ -1263,34 +1302,43 @@ input[type="radio"]:checked+label {
     background-size: contain;
     cursor: pointer;
 }
+
 .email-form__consent-fake-checkbox:hover {
     opacity: .7;
 }
-.email-form__checkbox-wrapper input:checked ~ .email-form__consent-fake-checkbox {
+
+.email-form__checkbox-wrapper input:checked~.email-form__consent-fake-checkbox {
     background-image: url('../images/checkbox.svg');
 }
+
 .email-form__checkbox-wrapper input {
     display: none;
 }
+
 .email-form__privacy-link {
     border-bottom: 1px solid white;
     cursor: pointer;
 }
+
 .email-form__privacy-link:hover {
     opacity: .5;
 }
+
 @media screen and (max-width: 1410px) {
     .email-form__lips {
         left: 20px;
     }
+
     .email-form__gender {
         left: 395px;
     }
+
     .email-form {
         padding-left: 60px;
         padding-right: 60px;
     }
 }
+
 @media screen and (max-width: 1200px) {
     .email-form__privacy-link {
         max-width: 250px;
@@ -1298,33 +1346,42 @@ input[type="radio"]:checked+label {
         border: none;
         text-decoration: underline;
     }
+
     .email-form__input {
         max-width: 250px;
     }
 }
+
 @media screen and (max-width: 960px) {
     .email-form__gender {
         display: none;
     }
+
     .email-form__form-wrapper {
         padding-top: 130px;
     }
+
     .email-form__eighteen {
         width: 300px
     }
+
     .email-form__lips {
         width: 400px
     }
+
     .email-form__title {
         font-size: 30px;
     }
+
     .gh-navigation {
         grid-template-columns: 1fr;
     }
+
     .gh-navigation>div {
         justify-content: center;
     }
 }
+
 @media screen and (max-width: 810px) {
     .email-form {
         margin-top: 90px;
@@ -1334,46 +1391,56 @@ input[type="radio"]:checked+label {
         align-items: center;
         color: white;
     }
+
     .email-form__text-wrapper {
         margin-top: 70px;
         width: 314px;
     }
+
     .email-form__desc {
         margin-top: 20px;
     }
+
     .email-form__form-wrapper {
         padding-top: 34px;
         width: 314px;
     }
+
     .email-form__email-label {
         font-size: 12px;
         margin-bottom: 5px;
     }
+
     .email-form__input {
         font-size: 12px;
         padding: 17px 30px 12px;
         max-width: 265px;
         box-sizing: border-box;
     }
+
     .email-form__input::placeholder {
         font-size: 12px
     }
+
     .email-form__consent-fake-checkbox {
         width: 21px;
         height: 21px;
         margin-right: 5px;
     }
+
     .email-form__privacy-link {
         font-size: 8px;
         text-decoration: none;
         border-bottom: 1px solid white;
     }
+
     .email-form__button {
         margin-top: 35px;
         width: 180px;
         padding-left: 15px;
         padding-right: 15px;
     }
+
     .email-form__lips {
         width: 305px;
         height: 98px;
@@ -1381,6 +1448,7 @@ input[type="radio"]:checked+label {
         bottom: 70px;
         transform: translate(-50%);
     }
+
     .email-form__eighteen {
         width: 215px;
         height: 144px;
@@ -1388,22 +1456,28 @@ input[type="radio"]:checked+label {
         bottom: 5px;
         transform: translate(-50%);
     }
+
     @media screen and (max-width: 325px) {
         .email-form {
             overflow: hidden;
         }
+
         .email-form__text-wrapper {
             width: 280px;
         }
+
         .email-form__title {
             font-size: 26px;
         }
+
         .email-form__desc {
             font-size: 14px;
         }
+
         .email-form__form-wrapper {
             width: 280px;
         }
+
         .email-form__button {
             font-size: 14px;
         }
