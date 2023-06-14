@@ -141,38 +141,6 @@ a {
     gap: 28px;
 }
 
-.health {
-    height: 360px;
-    width: 100%;
-    display: flex;
-    gap: 76px;
-    margin-top: 60px;
-}
-
-.health-container {
-    background: #000;
-    position: absolute;
-    height: 360px;
-    width: min(1060px, 55vw);
-    left: 0;
-    transition: opacity .5s ease-in-out;
-}
-
-.health-image {
-    height: 360px;
-    position: relative;
-    width: min(1060px, 55vw);
-}
-
-#health1-container {
-    width: 100%;
-}
-
-
-.health-right {
-    display: flex;
-    flex-direction: column;
-}
 
 .index {
     display: flex;
@@ -755,24 +723,8 @@ input[type="radio"]:checked+label {
         margin-top: 50px;
     }
 
-    .health {
-        width: 100vw;
-    }
-
-    .sex {
-        min-height: 250px;
-    }
-
-    .sex-container {
-        width: 95vw
-    }
-
     .grade-c {
         gap: 90px;
-    }
-
-    .sex-container:last-child img {
-        width: 100%;
     }
 
     .index-f,
@@ -786,12 +738,6 @@ input[type="radio"]:checked+label {
 @media screen and (max-width: 1100px) {
     html {
         font-size: 14px;
-    }
-
-
-    .sex-container,
-    .sex {
-        height: 120px;
     }
 
     .health-right .f {
@@ -851,11 +797,7 @@ input[type="radio"]:checked+label {
         padding: 0 30px;
         padding-top: 100px;
     }
-
-    .header img {
-        position: unset;
-    }
-
+    
     .header-first {
         font-size: 16px;
         line-height: 20px;
