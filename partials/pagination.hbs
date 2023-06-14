@@ -1,0 +1,28 @@
+{{!-- <nav class="pagination" role="navigation">
+    {{#if prev}}
+        <a class="newer-posts" href="{{page_url prev}}">&larr; Newer Posts</a>
+    {{/if}}
+    <span class="page-number">Page {{page}} of {{pages}}</span>
+    <span class="page-number">Page {{page}} of {{total}}</span>
+    <a href="{{page_url 2}}">asdasd</a>
+    {{#if next}}
+        <a class="older-posts" href="{{page_url next}}">Older Posts &rarr;</a>
+    {{/if}}
+</nav> --}}
+
+<div>
+    <span style="display:none;" id="page-num">{{page}}</span>
+    <div class="posts-pagination">
+        <a class="posts-pagination-link" href="{{page_url 1}}" data-url="1">1</a>
+        <a class="posts-pagination-link" href="{{page_url 2}}" data-url="2">2</a>
+        <a class="posts-pagination-link" href="{{page_url 3}}" data-url="3">3</a>
+        <a class="posts-pagination-link" href="{{page_url 4}}" data-url="4">4</a>
+        <a class="posts-pagination-link" href="{{page_url 5}}" data-url="5">5</a>
+        <a class="posts-pagination-link" href="{{page_url 6}}" data-url="6">6</a>
+    </div>
+    <script>
+        const span = document.getElementById("page-num").innerText;
+
+        document.querySelector(`a[data-url='${span}']`).classList.add("posts-active-link")
+    </script>
+</div>

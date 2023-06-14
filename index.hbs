@@ -1,0 +1,562 @@
+{{!< default}} <div class="hystmodal" id="myModal1" aria-hidden="true" x-data>
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window modal" role="dialog" aria-modal="true">
+            <header class="modal-header">
+                <span>Выберите</span>
+                <button @click="$store.test.close()">
+                    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.12207 6.12207L22.8775 22.8775" stroke="#FF5D02" stroke-width="2"
+                            stroke-miterlimit="10" />
+                        <path d="M22.8775 6.12207L6.12207 22.8775" stroke="#FF5D02" stroke-width="2"
+                            stroke-miterlimit="10" />
+                    </svg>
+
+                </button>
+            </header>
+            <div class="modal-groups">
+                <div class="modal-group">
+                    <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val1" hidden name="q-1"
+                        id="i-1-1" value="1">
+                    <label for="i-1-1">
+                        <span>Почти никогда или никогда</span>
+                    </label>
+                </div>
+                <div class="modal-group">
+                    <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val1" hidden name="q-1"
+                        id="i-1-2" value="2">
+                    <label for="i-1-2">
+                        <span>Редко (реже чем в половине случаев)</span>
+                    </label>
+                </div>
+                <div class="modal-group">
+                    <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val1" hidden name="q-1"
+                        id="i-1-3" value="3">
+                    <label for="i-1-3">
+                        <span>Иногда (примерно в половине случаев)</span>
+                    </label>
+                </div>
+                <div class="modal-group">
+                    <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val1" hidden name="q-1"
+                        id="i-1-4" value="4">
+                    <label for="i-1-4">
+                        <span>Часто (более чем в половине случаев)</span>
+                    </label>
+                </div>
+                <div class="modal-group">
+                    <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val1" hidden name="q-1"
+                        id="i-1-5" value="5">
+                    <label for="i-1-5">
+                        <span>Почти всегда или всегда</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="hystmodal" id="myModal2" aria-hidden="true" x-data>
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window modal" role="dialog" aria-modal="true">
+                <header class="modal-header">
+                    <span>Выберите</span>
+                    <button @click="$store.test.close()">
+                        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.12207 6.12207L22.8775 22.8775" stroke="#FF5D02" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M22.8775 6.12207L6.12207 22.8775" stroke="#FF5D02" stroke-width="2"
+                                stroke-miterlimit="10" />
+                        </svg>
+
+                    </button>
+                </header>
+                <div class="modal-groups">
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val2" hidden
+                            name="q-2" id="i-2-1" value="1">
+                        <label for="i-2-1">
+                            <span>Почти никогда или никогда</span>
+                        </label>
+                    </div>
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val2" hidden
+                            name="q-2" id="i-2-2" value="2">
+                        <label for="i-2-2">
+                            <span>Редко (реже чем в половине случаев)</span>
+                        </label>
+                    </div>
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val2" hidden
+                            name="q-2" id="i-2-3" value="3">
+                        <label for="i-2-3">
+                            <span>Иногда (примерно в половине случаев)</span>
+                        </label>
+                    </div>
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val2" hidden
+                            name="q-2" id="i-2-4" value="4">
+                        <label for="i-2-4">
+                            <span>Часто (более чем в половине случаев)</span>
+                        </label>
+                    </div>
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val2" hidden
+                            name="q-2" id="i-2-5" value="5">
+                        <label for="i-2-5">
+                            <span>Почти всегда или всегда</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hystmodal" id="myModal3" aria-hidden="true" x-data>
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window modal" role="dialog" aria-modal="true">
+                <header class="modal-header">
+                    <span>Выберите</span>
+                    <button @click="$store.test.close()">
+                        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.12207 6.12207L22.8775 22.8775" stroke="#FF5D02" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M22.8775 6.12207L6.12207 22.8775" stroke="#FF5D02" stroke-width="2"
+                                stroke-miterlimit="10" />
+                        </svg>
+
+                    </button>
+                </header>
+                <div class="modal-groups">
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val3" hidden
+                            name="q-3" id="i-3-1" value="1">
+                        <label for="i-3-1">
+                            <span>Почти никогда или никогда</span>
+                        </label>
+                    </div>
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val3" hidden
+                            name="q-3" id="i-3-2" value="2">
+                        <label for="i-3-2">
+                            <span>Редко (реже чем в половине случаев)</span>
+                        </label>
+                    </div>
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val3" hidden
+                            name="q-3" id="i-3-3" value="3">
+                        <label for="i-3-3">
+                            <span>Иногда (примерно в половине случаев)</span>
+                        </label>
+                    </div>
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val3" hidden
+                            name="q-3" id="i-3-4" value="4">
+                        <label for="i-3-4">
+                            <span>Часто (более чем в половине случаев)</span>
+                        </label>
+                    </div>
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val3" hidden
+                            name="q-3" id="i-3-5" value="5">
+                        <label for="i-3-5">
+                            <span>Почти всегда или всегда</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hystmodal" id="myModal4" aria-hidden="true" x-data>
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window modal" role="dialog" aria-modal="true">
+                <header class="modal-header">
+                    <span>Выберите</span>
+                    <button @click="$store.test.close()">
+                        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.12207 6.12207L22.8775 22.8775" stroke="#FF5D02" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M22.8775 6.12207L6.12207 22.8775" stroke="#FF5D02" stroke-width="2"
+                                stroke-miterlimit="10" />
+                        </svg>
+
+                    </button>
+                </header>
+                <div class="modal-groups">
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val4" hidden
+                            name="q-4" id="i-4-1" value="1">
+                        <label for="i-4-1">
+                            <span>Почти никогда или никогда</span>
+                        </label>
+                    </div>
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val4" hidden
+                            name="q-4" id="i-4-2" value="2">
+                        <label for="i-4-2">
+                            <span>Редко (реже чем в половине случаев)</span>
+                        </label>
+                    </div>
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val4" hidden
+                            name="q-4" id="i-4-3" value="3">
+                        <label for="i-4-3">
+                            <span>Иногда (примерно в половине случаев)</span>
+                        </label>
+                    </div>
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val4" hidden
+                            name="q-4" id="i-4-4" value="4">
+                        <label for="i-4-4">
+                            <span>Часто (более чем в половине случаев)</span>
+                        </label>
+                    </div>
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val4" hidden
+                            name="q-4" id="i-4-5" value="5">
+                        <label for="i-4-5">
+                            <span>Почти всегда или всегда</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hystmodal" id="myModal5" aria-hidden="true" x-data>
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window modal" role="dialog" aria-modal="true">
+                <header class="modal-header">
+                    <span>Выберите</span>
+                    <button @click="$store.test.close()">
+                        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.12207 6.12207L22.8775 22.8775" stroke="#FF5D02" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M22.8775 6.12207L6.12207 22.8775" stroke="#FF5D02" stroke-width="2"
+                                stroke-miterlimit="10" />
+                        </svg>
+
+                    </button>
+                </header>
+                <div class="modal-groups">
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val5" hidden
+                            name="q-5" id="i-5-1" value="1">
+                        <label for="i-5-1">
+                            <span>Чрезвычайно трудно</span>
+                        </label>
+                    </div>
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val5" hidden
+                            name="q-5" id="i-5-2" value="2">
+                        <label for="i-5-2">
+                            <span>Очень трудно</span>
+                        </label>
+                    </div>
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val5" hidden
+                            name="q-5" id="i-5-3" value="3">
+                        <label for="i-5-3">
+                            <span>Трудно</span>
+                        </label>
+                    </div>
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val5" hidden
+                            name="q-5" id="i-5-4" value="4">
+                        <label for="i-5-4">
+                            <span>Не очень трудно</span>
+                        </label>
+                    </div>
+                    <div class="modal-group">
+                        <input x-on:change="$store.test.close()" type="radio" x-model="$store.test.val5" hidden
+                            name="q-5" id="i-5-5" value="5">
+                        <label for="i-5-5">
+                            <span>Не трудно</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <span class="header-first">ВСЕ, ЧТО ВЫ ХОТЕЛИ ЗНАТЬ О</span>
+        <div class="sex">
+            <div class="sex-container">
+                <img id="sex2" src="{{asset 'images/sex2.png'}}" alt="">
+            </div>
+            <div class="sex-container" id="sex1">
+                <img src="{{asset 'images/sex1.png'}}" alt="">
+            </div>
+        </div>
+        <div class="health">
+            <div class="health-image">
+                <div class="health-container">
+                    <img src="/assets/images/health2.png" alt="">
+                </div>
+                <div class="health-container" id="health1">
+                    <img src="/assets/images/health1.png" alt="">
+                </div>
+            </div>
+            <div class="health-right">
+                <span class="f">ОТНОШЕ<br>НИЯХ</span>
+                <span class="s">БЫСТРЫЙ<br>ОТВЕТ</span>
+            </div>
+        </div>
+        <div class="mobile header-mobile">
+            <img src="{{asset 'images/sex3.png'}}" alt="">
+            <img src="{{asset 'images/health3.png'}}" alt="">
+            <img src="{{asset 'images/rel.png'}}" alt="">
+
+        </div>
+        <a target="_blank" href="https://jent.men" class="spec js-spec-watcher">СПЕЦИАЛИСТАМ</a>
+    </header>
+
+    <section class="posts">
+        {{pagination}}
+        <div class="posts-grid">
+            {{#foreach posts}}
+            {{> "loop"}}
+            {{/foreach}}
+        </div>
+    </section>
+
+    <section class="index">
+        <span class="index-f">ИНДЕКС*</span>
+        <span class="index-s">ЭРЕКТИЛЬНОЙ</span>
+        <div class="mobile">
+            <span class="index-i">ФУНКЦИИ</span>
+        </div>
+        <div class="index-image">
+            <div class="index-container">
+                <img src="/assets/images/index2.png" alt="">
+            </div>
+            <div class="index-container" id="index1">
+                <img src="/assets/images/index1.png" alt="">
+            </div>
+        </div>
+
+        <span class="index-l">*Международный Индекс Эректильной Функции (МИЭФ-5) – анкета, которая определяет, страдает
+            ли мужчина эректильной дисфункцией.
+
+        </span>
+
+        <span class="index-t1">Эти вопросы о том, как нарушения эрекции сказывались на Вашей сексуальной жизни в течение
+            последних 4-х недель</span>
+
+
+    </section>
+
+    <section class="test">
+        <div class="test-list">
+            <div class="question">
+                <span>Как часто у Вас возникала эрекция при сексуальной активности за последнее время?</span>
+                <a href="#" class="question-a" data-hystmodal="#myModal1">
+                    <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.9092 0.522217L8.02589 7.503L0.948011 0.725314" stroke="white"
+                            stroke-linecap="round" />
+                    </svg>
+                    <span id="q-1"></span>
+                </a>
+            </div>
+            <div class="question">
+                <span>Как часто за последнее время возникающая у Вас эрекция была достаточна для введения полового члена
+                    (для начала полового акта)?</span>
+                <a href="#" class="question-a" data-hystmodal="#myModal2">
+                    <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.9092 0.522217L8.02589 7.503L0.948011 0.725314" stroke="white"
+                            stroke-linecap="round" />
+                    </svg>
+                    <span id="q-2"></span>
+                </a>
+            </div>
+            <div class="question">
+                <span>При попытке полового акта как часто у Вас получалось осуществить введение полового члена (начать
+                    половой акт)?</span>
+                <a href="#" class="question-a" data-hystmodal="#myModal3">
+                    <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.9092 0.522217L8.02589 7.503L0.948011 0.725314" stroke="white"
+                            stroke-linecap="round" />
+                    </svg>
+                    <span id="q-3"></span>
+                </a>
+            </div>
+            <div class="question">
+                <span>Как часто за последнее время Вам удавалось сохранить эрекцию после начала полового акта?</span>
+                <a href="#" class="question-a" data-hystmodal="#myModal4">
+                    <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.9092 0.522217L8.02589 7.503L0.948011 0.725314" stroke="white"
+                            stroke-linecap="round" />
+                    </svg>
+                    <span id="q-4"></span>
+                </a>
+            </div>
+            <div class="question">
+                <span>Насколько трудным было сохранить эрекцию в течении и до конца полового акта?</span>
+                <a href="#" class="question-a" data-hystmodal="#myModal5">
+                    <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.9092 0.522217L8.02589 7.503L0.948011 0.725314" stroke="white"
+                            stroke-linecap="round" />
+                    </svg>
+                    <span id="q-5"></span>
+                </a>
+            </div>
+
+        </div>
+        <div class="test-res-score-container">
+            <span class="test-res-score">Результат</span>
+            <span x-data x-text="$store.res.getRes()" class="test-res-score"></span>
+        </div>
+        <div class="test-res-inter-container">
+            <span class="text-res-inter">Оценка результатов</span>
+            <span class="text-res-inter"><b>21-25 баллов</b> - эректильная дисфункция отсутствует</span>
+            <span class="text-res-inter"><b>16-20 баллов</b> - эректильная дисфункция легкой степени</span>
+            <span class="text-res-inter"><b>11-15 баллов</b> - эректильная дисфункция умеренной степени</span>
+            <span class="text-res-inter"><b>5-10 баллов</b> - выраженная эректильная дисфункция</span>
+        </div>
+
+        <span class="test-res-text" x-data x-show="$store.res.show" x-text="$store.res.text"></span>
+        <span class="test-a">Внимание! Анкета не является основой диагностики, при наличии симптомов эректильной
+            дисфункции верную интерпретацию результатов может дать только врач!</span>
+    </section>
+    <section class="grade">
+        <span class="grade-f">У мужчин с нарушениями эрекции при оценке качества жизни</span>
+        <div class="grade-c">
+            <div class="grade-n">
+                <div class="grade-l">
+                    <span class="grade-l-t">В</span>
+                    <span class="grade-b-n">4</span>
+                </div>
+                <div class="grade-r">
+                    <span class="grade-r-t">раза</span>
+                    <span class="grade-r-n">выше физическая неудовлетво-ренность</span>
+                </div>
+            </div>
+            <div class="grade-t">
+                <div class="grade-l">
+                    <span class="grade-l-t">В</span>
+                    <span class="grade-b-n">2</span>
+                </div>
+                <div class="grade-r">
+                    <span class="grade-r-t">раза</span>
+                    <span class="grade-r-n">выше эмоциональная неудовлетво-ренность</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="stat">
+        <div class="stat-col">
+            <span class="stat-col-p">
+                Средняя степень ЭД
+            </span>
+            <div class="stat-1">
+                <span class="stat-n">6,6%</span>
+            </div>
+        </div>
+        <div class="stat-col">
+            <span class="stat-col-p">
+                Отсутствуют признаки ЭД
+            </span>
+            <div class="stat-2">
+                <span class="stat-n">10,1%</span>
+            </div>
+        </div>
+        <div class="stat-col">
+            <span class="stat-col-p">
+                Тяжелая степень ЭД
+            </span>
+            <div class="stat-3">
+                <span class="stat-n">12%</span>
+            </div>
+        </div>
+        <div class="stat-col">
+            <span class="stat-col-p">
+                Легкая степень ЭД
+            </span>
+            <div class="stat-4">
+                <span class="stat-n">71,3%</span>
+            </div>
+        </div>
+        <div class="stat-r">
+            <span class="stat-t">Эпидемиологическое исследование распространенности эректильной дисфункции по опроснику
+                МИЭФ–5</span>
+            <a class="index-l"
+                href="https://www.rmj.ru/articles/urologiya/Epidemiologicheskoe_issledovanie_rasprostranennosti_erektilynoy_disfunkcii_v_Rossiyskoy_Federacii/"
+                target="_blank">
+                1 - Эпидемиологическое исследование распространенности эректильной дисфункции в Российской Федерации
+            </a>
+        </div>
+    </section>
+    <div class="stat-ob"></div>
+    <div class="mobile" style="padding: 0 30px;">
+        <a class="index-l"
+            href="https://www.rmj.ru/articles/urologiya/Epidemiologicheskoe_issledovanie_rasprostranennosti_erektilynoy_disfunkcii_v_Rossiyskoy_Federacii/"
+            target="_blank">
+            1 - Эпидемиологическое исследование распространенности эректильной дисфункции в Российской Федерации
+        </a>
+    </div>
+    <section class="email-form">
+        <div class="email-form__text-wrapper">
+            <h3 class="email-form__title">Подпишись на&nbsp;рассылку!</h3>
+            <p class="email-form__desc">Оставь&nbsp;свой&nbsp;email! Пришлем&nbsp;много&nbsp;крутых
+                и&nbsp;полезных&nbsp;материалов</p>
+        </div>
+        <div class="email-form__form-wrapper">
+            <label class="email-form__email-label" for="email">Email</label>
+            <input class="email-form__input" name="email" id="email-input" placeholder="Введи email">
+            <label class="email-form__checkbox-wrapper" for="consent">
+                <input type="checkbox" id="consent" name="consent">
+                <div class="email-form__consent-fake-checkbox"></div>
+                <div class="email-form__consent-label" for="consent">
+                    <a class="email-form__privacy-link">Я согласен с политикой конфиденциальности</a>
+                </div>
+            </label>
+            <button id="submit-email-button" class="email-form__button" type="submit">Отправить</button>
+            <div class="email-form__lips"></div>
+            <div class="email-form__eighteen"></div>
+            <div class="email-form__gender"></div>
+        </div>
+    </section>
+    <div class="last-spec">
+        <a target="_blank" href="https://jent.men" class="spec js-spec-watcher" data-micromodal-trigger="modal-1">СПЕЦИАЛИСТАМ</a>
+    </div>
+    <div class="gh-about-content-inner" style="display:none;">
+        {{#if @custom.primary_header}}
+        <h1 class="gh-about-primary">{{{@custom.primary_header}}}</h1>
+        {{/if}}
+        {{#if @custom.secondary_header}}
+        <p class="gh-about-secondary">{{{@custom.secondary_header}}}</p>
+        {{/if}}
+        {{#if @site.members_enabled}}
+        {{#unless @member}}
+        <div class="gh-subscribe-input" data-portal>
+            jamie@example.com
+            <span class="gh-btn gh-primary-btn">Subscribe</span>
+        </div>
+        {{/unless}}
+        {{/if}}
+    </div>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(93741697, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/93741697" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+    {{#contentFor "body_class"}}{{#match @custom.header_section_layout "Side by side"}} has-side-about{{/match}}{{#match
+    @custom.header_section_layout "Large background"}}{{#if @site.cover_image}} is-head-transparent
+    has-background-about{{else}} has-side-about{{/if}}{{/match}}{{#match @custom.header_section_layout "Typographic
+    profile"}}{{#if @site.icon}} has-typographic-about{{else}} has-side-about{{/if}}{{/match}}{{/contentFor}}
