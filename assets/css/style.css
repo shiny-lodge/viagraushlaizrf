@@ -103,6 +103,8 @@ a {
     flex: 1;
     width: 0;
     height: fit-content;
+    transform: scaleY(0.7) scaleX(1);
+    transform-origin: top;
 }
 
 .header__health-column {
@@ -139,6 +141,23 @@ a {
     display: flex;
     flex-direction: column;
     gap: 28px;
+}
+
+.header__svg-letter-s,
+.header__svg-letter-e, 
+.header__health-image {
+    transition: transform 0.5s;
+}
+
+.header:hover>.desktop-only>.header__sex>.header__svg-letter-s {
+    transform: scaleX(1.2) translateX(-10%);
+}
+
+.header:hover>.desktop-only>.header__sex>.header__svg-letter-e {
+    transform: scaleX(0.8) translateX(25%);
+}
+.header:hover>.desktop-only>.header__health-wrapper>.header__health-image {
+    transform: scaleY(1) scaleX(1);
 }
 
 
@@ -759,8 +778,7 @@ input[type="radio"]:checked+label {
     .post:nth-child(4) {
         grid-column: auto;
     }
-
-
+    
 }
 
 @media screen and (max-width: 900px) {
