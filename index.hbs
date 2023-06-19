@@ -301,7 +301,8 @@
             </svg>
             <div class="header__health-wrapper">
                 {{!-- <img class="header__health-image" src="{{asset 'images/health.svg'}}" alt="Здоровье"> --}}
-                <svg class="header__health-image" width="1051" height="256" viewBox="0 0 1051 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="header__health-image" width="1051" height="256" viewBox="0 0 1051 256" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M53.6493 0C21.6713 0 2.11446 16.0579 2.11446 43.6985L2.11425 79.0188H27.7496L27.7498 43.6985C27.7498 28.9569 37.5282 20.5331 53.6493 20.5331H56.2922C72.4133 20.5331 81.6632 28.9569 81.6632 43.6985L81.663 73.6415C81.663 88.6465 72.4131 97.3335 54.9706 97.3335H39.6422V118.393H54.9706C71.356 118.393 84.5701 124.711 84.5701 142.085V175.974C84.5701 191.505 75.8488 200.719 56.5562 200.719H53.9134C34.6209 200.719 25.8996 192.032 25.8996 175.447V154.265H0L0 174.921C0 205.984 20.8782 221.252 53.9134 221.252H56.5562C89.8557 221.252 110.205 205.72 110.205 177.553V142.612C110.205 124.448 101.484 114.181 89.3271 108.653V103.388C101.748 96.5438 107.298 85.2243 107.298 70.4826L107.299 40.0131C107.299 16.0579 88.2702 0 56.2922 0H53.6493Z"
                         fill="#FF5D02" />
@@ -450,82 +451,63 @@
         <span class="test-a">Внимание! Анкета не является основой диагностики, при наличии симптомов эректильной
             дисфункции верную интерпретацию результатов может дать только врач!</span>
     </section>
+
     <section class="grade">
-        <span class="grade-f">У мужчин с нарушениями эрекции при оценке качества жизни</span>
-        <div class="grade-c">
-            <div class="grade-n">
-                <div class="grade-l">
-                    <span class="grade-l-t">В</span>
-                    <span class="grade-b-n">4</span>
+        <h2 class="grade__title">У мужчин с нарушением эрекции при оценке качества жизни...</h2>
+        <div class="grade__content-wrapper">
+            <div class="grade__grid-wrapper">
+                <div class="grade__by">В</div>
+                <div class="grade__amount grade__amount_correction">4</div>
+                <div class="grade__times">раза</div>
+                <p class="grade__text">выше физическая неудовлетво- ренность</p>
+            </div>
+            <div class="grade__grid-wrapper">
+                <div class="grade__by">В</div>
+                <div class="grade__amount">2</div>
+                <div class="grade__times">раза</div>
+                <p class="grade__text">выше эмоциональная неудовлетво- ренность</p>
+            </div>
+        </div>
+        <a class="grade__link" href="https://link.springer.com/chapter/10.1007/978-1-4757-6260-0_23">2 — Deutsch S,
+            Sherman L. Previously unrecognized diabetes mellitus in sexually impotent men. JAMA 1980; 244. -
+            2430–2432.</a>
+    </section>
+
+    <section class="graph">
+        <div class="graph__grid-wrapper">
+            <h2 class="graph__title">Эпидемиологическое исследование распространенности эректильной дисфункции по
+                опроснику МИЭФ–5</h2>
+            <div class="graph__stat">
+                <div class="graph__column col-1">
+                    <p class="graph__column-text">Средняя степень ЭД</p>
+                    <div class="graph__column-col">
+                        <p class="graph__column-percentage">6,6%</p>
+                    </div>
                 </div>
-                <div class="grade-r">
-                    <span class="grade-r-t">раза</span>
-                    <span class="grade-r-n">выше физическая неудовлетво-ренность</span>
+                <div class="graph__column col-2">
+                    <p class="graph__column-text">Отсутствуют признаки ЭД</p>
+                    <div class="graph__column-col">
+                        <p class="graph__column-percentage">10,1%</p>
+                    </div>
+                </div>
+                <div class="graph__column col-3">
+                    <p class="graph__column-text">Тяжелая степень ЭД</p>
+                    <div class="graph__column-col">
+                        <p class="graph__column-percentage">12%</p>
+                    </div>
+                </div>
+                <div class="graph__column col-4">
+                    <p class="graph__column-text">Легкая степень ЭД</p>
+                    <div class="graph__column-col">
+                        <p class="graph__column-percentage">71,3%</p>
+                    </div>
                 </div>
             </div>
-            <div class="grade-t">
-                <div class="grade-l">
-                    <span class="grade-l-t">В</span>
-                    <span class="grade-b-n">2</span>
-                </div>
-                <div class="grade-r">
-                    <span class="grade-r-t">раза</span>
-                    <span class="grade-r-n">выше эмоциональная неудовлетво-ренность</span>
-                </div>
-            </div>
+            <a class="graph__link"
+                href="https://www.rmj.ru/articles/urologiya/Epidemiologicheskoe_issledovanie_rasprostranennosti_erektilynoy_disfunkcii_v_Rossiyskoy_Federacii/">1
+                — Эпидемиологическое исследование распространенности эректильной дисфункции в Российской Федерации</a>
         </div>
     </section>
-    <section class="stat">
-        <div class="stat-col">
-            <span class="stat-col-p">
-                Средняя степень ЭД
-            </span>
-            <div class="stat-1">
-                <span class="stat-n">6,6%</span>
-            </div>
-        </div>
-        <div class="stat-col">
-            <span class="stat-col-p">
-                Отсутствуют признаки ЭД
-            </span>
-            <div class="stat-2">
-                <span class="stat-n">10,1%</span>
-            </div>
-        </div>
-        <div class="stat-col">
-            <span class="stat-col-p">
-                Тяжелая степень ЭД
-            </span>
-            <div class="stat-3">
-                <span class="stat-n">12%</span>
-            </div>
-        </div>
-        <div class="stat-col">
-            <span class="stat-col-p">
-                Легкая степень ЭД
-            </span>
-            <div class="stat-4">
-                <span class="stat-n">71,3%</span>
-            </div>
-        </div>
-        <div class="stat-r">
-            <span class="stat-t">Эпидемиологическое исследование распространенности эректильной дисфункции по опроснику
-                МИЭФ–5</span>
-            <a class="index-l"
-                href="https://www.rmj.ru/articles/urologiya/Epidemiologicheskoe_issledovanie_rasprostranennosti_erektilynoy_disfunkcii_v_Rossiyskoy_Federacii/"
-                target="_blank">
-                1 - Эпидемиологическое исследование распространенности эректильной дисфункции в Российской Федерации
-            </a>
-        </div>
-    </section>
-    <div class="stat-ob"></div>
-    <div class="mobile" style="padding: 0 30px;">
-        <a class="index-l"
-            href="https://www.rmj.ru/articles/urologiya/Epidemiologicheskoe_issledovanie_rasprostranennosti_erektilynoy_disfunkcii_v_Rossiyskoy_Federacii/"
-            target="_blank">
-            1 - Эпидемиологическое исследование распространенности эректильной дисфункции в Российской Федерации
-        </a>
-    </div>
     <section class="email-form">
         <div class="email-form__text-wrapper">
             <h3 class="email-form__title">Подпишись на&nbsp;рассылку!</h3>
@@ -589,7 +571,8 @@
         <div><img src="https://mc.yandex.ru/watch/93741697" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
-    {{#contentFor "body_class"}}{{#match @custom.header_section_layout "Side by side"}} has-side-about{{/match}}{{#match
+    {{#contentFor "body_class"}}{{#match @custom.header_section_layout "Side by side"}}
+    has-side-about{{/match}}{{#match
     @custom.header_section_layout "Large background"}}{{#if @site.cover_image}} is-head-transparent
     has-background-about{{else}} has-side-about{{/if}}{{/match}}{{#match @custom.header_section_layout "Typographic
     profile"}}{{#if @site.icon}} has-typographic-about{{else}} has-side-about{{/if}}{{/match}}{{/contentFor}}

@@ -109,19 +109,19 @@ const observer = new IntersectionObserver((entries) => {
     })
 });
 
-observer.observe(document.querySelector(".grade-c"));
+observer.observe(document.querySelector(".grade"));
 
 const observer2 = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            document.querySelector(".stat").classList.add("stat-anim")
+            document.querySelector(".graph").classList.add("graph-anim")
         } else {
-            document.querySelector(".stat").classList.remove("stat-anim")
+            document.querySelector(".graph").classList.remove("graph-anim")
         }
     })
 });
 
-observer2.observe(document.querySelector(".stat-ob"));
+observer2.observe(document.querySelector(".graph"));
 
 const submitEmailButton = document.querySelector('#submit-email-button')
 const emailInput = document.querySelector('#email-input')
