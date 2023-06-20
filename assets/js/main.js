@@ -196,7 +196,7 @@ function submitEmail() {
 
 function handleSubmitClick() {
     if (isEmailValid(emailInput.value)) {
-        ym(93741697, 'reachGoal', 'email')
+        sendMetrikaData(93741697, 'reachGoal', 'email')
         submitEmail()
     } else {
         showEmailErrorToast()
@@ -214,19 +214,29 @@ const specialistsButton = document.querySelectorAll('.js-spec-watcher')
 
 specialistsButton.forEach((button) => {
     button.addEventListener('click', (event) => {
-        ym(93741697, 'reachGoal', 'goal')
+        sendMetrikaData(93741697, 'reachGoal', 'goal')
     })
     button.addEventListener('auxclick', (event) => {
-        ym(93741697, 'reachGoal', 'goal')
+        sendMetrikaData(93741697, 'reachGoal', 'goal')
     })
 })
 
 const metricIntervals = [30, 60, 90]
 metricIntervals.forEach((interval) => {
-    setInterval(() => {
-        ym(93741697, 'reachGoal', `${interval}sec`)
+    setTimeout(() => {
+        sendMetrikaData(93741697, 'reachGoal', `${interval}sec`)
     }, interval * 1000)
 })
 
+function sendMetrikaData(id, goal, payload) {
+    if (ym) {
+        ym(id, goal, payload)
+    } else {
+        setTimeout(() => {
+            sendMetrikaData(id, goal, payload)
+        },
+            500)
+    }
+}
 
 submitEmailButton && submitEmailButton.addEventListener('click', handleSubmitClick)
