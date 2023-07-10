@@ -1,3 +1,5 @@
+@import url('./blocks/go-button.css');
+
 :root {
     --orange: #FF5D02;
     --ind: calc(1vw + 1vh);
@@ -715,7 +717,7 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-bottom: 160px;
+    padding-bottom: 280px;
 }
 
 .modal {

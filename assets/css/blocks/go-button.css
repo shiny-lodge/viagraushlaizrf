@@ -1,0 +1,136 @@
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+.go-button__centring-wrapper {
+    position: fixed;
+    bottom: 10vh;
+    right: 8vw;
+    z-index: 10;
+}
+
+@media screen and (max-width: 900px) {
+    .go-button__centring-wrapper {
+        transform: translateX(50%);
+        right: 50%;
+    }
+}
+
+.go-button {
+    animation: pulse 1s ease-in-out infinite alternate;
+    transition: all 0.5s;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.go-button__wrapper {
+    height: 146px;
+    width: 146px;
+    background: linear-gradient(176deg, rgba(255,78,2,1) 10%, rgba(255,78,2,1) 92%);
+    box-shadow: 0 0 25px 10px #FF5D02;
+    border: none;
+    outline: none;
+    border-radius: 100%;
+    position: relative;
+    transition: transform 0.5s ease-in-out, background 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.go-button:hover {
+    transform: scale(1) !important;
+}
+
+.go-button:hover > .go-button__wrapper {
+    transform: scale(1.5);
+    background: linear-gradient(176deg, rgba(255,78,2,1) 10%, rgba(255,151,2,1)); 
+}
+
+.go-button__middle {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 54%;
+    height: 54%;
+    background: rgb(255,78,2);
+    background: radial-gradient(circle,#ff4e02 40%,#ff9702 76%);
+    border-radius: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.go-button__center {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    width: 33%;
+    height: 33%;
+    background: rgb(255,78,2);
+    background: radial-gradient(circle,#ff4e02 40%,#ff9702 76%);
+    border-radius: 100%;
+}
+
+.go-button__text {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    background-image: url("../images/button-text-1.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.go-button__text_img_1 {
+    background-image: url("../images/button-text-1.svg");
+}
+
+.go-button__text_img_2 {
+    background-image: url("../images/button-text-2.svg");
+}
+
+.go-button__text_img_3 {
+    background-image: url("../images/button-text-3.svg");
+}
+
+.go-button__text_img_4 {
+    background-image: url("../images/button-text-4.svg");
+}
+
+.go-button__text_img_5 {
+    background-image: url("../images/button-text-5.svg");
+}
+
+.go-button__title {
+    opacity: 0;
+    font-family: "pragmatica-extended", sans-serif;
+    letter-spacing: 2%;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: opacity .5s;
+}
+
+.go-button:hover > .go-button__wrapper > .go-button__title {
+    opacity: 1;
+    transition-delay: .5s;
+}
+
+.go-button:hover > .go-button__wrapper > .go-button__middle,
+.go-button:hover > .go-button__wrapper > .go-button__text  {
+    opacity: 0;
+}

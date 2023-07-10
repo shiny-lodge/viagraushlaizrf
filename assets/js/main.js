@@ -123,6 +123,46 @@ const observer2 = new IntersectionObserver((entries) => {
 
 observer2.observe(document.querySelector(".graph"));
 
+const goButtonClasses = [
+    "go-button__text_img_1",
+    "go-button__text_img_2",
+    "go-button__text_img_3",
+    "go-button__text_img_4",
+    "go-button__text_img_5"
+]
+
+const goButtonTitles = [
+    "Переходи к\xa0делу",
+    "Переходи к\xa0телу",
+    "Войди уверенно",
+    "Закрепи результат",
+    "Укрепи отношения"
+]
+
+const goButtonText = document.querySelector('.go-button__text')
+const goButtonTitle = document.querySelector('.go-button__title')
+
+function removeClass(className) {
+    goButtonText.classList.remove(className)
+}
+
+const goButtonObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            goButtonClasses.forEach(removeClass)
+            goButtonText.classList.add(goButtonClasses[entry.target.dataset.gobutton])
+            goButtonTitle.textContent = goButtonTitles[entry.target.dataset.gobutton]
+        }
+    })
+});
+
+const goButtonObserverTargets = document.querySelectorAll(".js-go-observer")
+goButtonObserverTargets.forEach((target) => {
+    goButtonObserver.observe(target);
+})
+
+
+
 const submitEmailButton = document.querySelector('#submit-email-button')
 const emailInput = document.querySelector('#email-input')
 

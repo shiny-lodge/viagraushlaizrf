@@ -278,7 +278,7 @@
         </div>
     </div>
 
-    <header class="header">
+    <header class="header js-go-observer" data-gobutton="0">
         <h1 class="header-title">Все, что вы хотели знать о</h1>
         <div class="desktop-only">
             {{!-- <object class="header__sex" data="{{asset 'images/sex.svg'}}" alt="Сексе"></object> --}}
@@ -353,7 +353,7 @@
         </div>
     </section>
 
-    <section class="index">
+    <section class="index js-go-observer" data-gobutton="1">
         <span class="index-f">ИНДЕКС*</span>
         <span class="index-s">ЭРЕКТИЛЬНОЙ</span>
         <div class="mobile">
@@ -379,7 +379,7 @@
 
     </section>
 
-    <section class="test">
+    <section class="test js-go-observer" data-gobutton="2">
         <div class="test-list">
             <div class="question">
                 <span>Как часто у Вас возникала эрекция при сексуальной активности за последнее время?</span>
@@ -452,7 +452,7 @@
             дисфункции верную интерпретацию результатов может дать только врач!</span>
     </section>
 
-    <section class="grade">
+    <section class="grade js-go-observer" data-gobutton="3">
         <h2 class="grade__title">У мужчин с нарушением эрекции при оценке качества жизни...</h2>
         <div class="grade__content-wrapper">
             <div class="grade__grid-wrapper">
@@ -473,7 +473,7 @@
             2430–2432.</a>
     </section>
 
-    <section class="graph">
+    <section class="graph js-go-observer" data-gobutton="4">
         <div class="graph__grid-wrapper">
             <h2 class="graph__title">Эпидемиологическое исследование распространенности эректильной дисфункции по
                 опроснику МИЭФ–5</h2>
@@ -508,6 +508,7 @@
                 — Эпидемиологическое исследование распространенности эректильной дисфункции в Российской Федерации</a>
         </div>
     </section>
+
     <section class="email-form">
         <div class="email-form__text-wrapper">
             <h3 class="email-form__title">Подпишись на&nbsp;рассылку!</h3>
@@ -530,10 +531,12 @@
             <div class="email-form__gender"></div>
         </div>
     </section>
+
     <div class="last-spec">
         <a target="_blank" href="https://jent.men" class="spec js-spec-watcher"
             data-micromodal-trigger="modal-1">СПЕЦИАЛИСТАМ</a>
     </div>
+
     <div class="gh-about-content-inner" style="display:none;">
         {{#if @custom.primary_header}}
         <h1 class="gh-about-primary">{{{@custom.primary_header}}}</h1>
@@ -550,27 +553,18 @@
         {{/unless}}
         {{/if}}
     </div>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-            m[i].l = 1 * new Date();
-            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
-            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-        })
-            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-        ym(93741697, "init", {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true
-        });
-    </script>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/93741697" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
+    <div class="go-button__centring-wrapper">
+        <div class="go-button">
+            <button class="go-button__wrapper">
+                <div class="go-button__middle">
+                    <div class="go-button__center"></div>
+                </div>
+                <div class="go-button__text"></div>
+                <div class="go-button__title">Переходи к&nbsp;делу</div>
+            </button>
+        </div>
+    </div>
+   
     {{#contentFor "body_class"}}{{#match @custom.header_section_layout "Side by side"}}
     has-side-about{{/match}}{{#match
     @custom.header_section_layout "Large background"}}{{#if @site.cover_image}} is-head-transparent
