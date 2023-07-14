@@ -882,7 +882,7 @@ input[type="radio"]:checked+label {
     font-size: 20px;
     line-height: 26px;
     position: relative;
-    z-index: 99;
+    z-index: 7;
     color: white;
 }
 

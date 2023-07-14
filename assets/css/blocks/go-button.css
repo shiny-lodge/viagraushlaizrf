@@ -51,7 +51,8 @@
 
 .go-button:hover > .go-button__wrapper {
     transform: scale(1.5);
-    background: linear-gradient(176deg, rgba(255,78,2,1) 10%, rgba(255,151,2,1)); 
+    background: linear-gradient(176deg, rgba(255,78,2,1) 10%, rgba(255,151,2,1));
+    opacity: 1; 
 }
 
 .go-button__middle {
