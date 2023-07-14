@@ -884,6 +884,10 @@ input[type="radio"]:checked+label {
     position: relative;
     z-index: 7;
     color: white;
+    background: #000A;
+    display: block;
+    max-width: fit-content;
+    padding: 0 5px;
 }
 
 .post:nth-child(4) {
