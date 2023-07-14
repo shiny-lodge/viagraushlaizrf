@@ -39,6 +39,10 @@
     position: relative;
     transition: transform 0.5s ease-in-out, background 0.5s ease-in-out;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .go-button:hover {
