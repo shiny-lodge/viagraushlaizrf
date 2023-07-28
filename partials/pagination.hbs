@@ -12,6 +12,9 @@
 
 <div>
     <span style="display:none;" id="page-num">{{page}}</span>
+    <div class="next-page__wrapper">
+        <a href="" id="next-page-button" class="next-page__button">Листай</a>
+    </div>
     <div class="posts-pagination">
         <a class="posts-pagination-link" href="{{page_url 1}}" data-url="1">1</a>
         <a class="posts-pagination-link" href="{{page_url 2}}" data-url="2">2</a>
@@ -19,10 +22,15 @@
         <a class="posts-pagination-link" href="{{page_url 4}}" data-url="4">4</a>
         <a class="posts-pagination-link" href="{{page_url 5}}" data-url="5">5</a>
         <a class="posts-pagination-link" href="{{page_url 6}}" data-url="6">6</a>
+        {{!-- <a class="posts-pagination-link" href="{{page_url 7}}" data-url="7">7</a>
+        <a class="posts-pagination-link" href="{{page_url 8}}" data-url="8">8</a>
+        <a class="posts-pagination-link" href="{{page_url 9}}" data-url="9">9</a>
+        <a class="posts-pagination-link" href="{{page_url 10}}" data-url="10">10</a> --}}
     </div>
     <script>
-        const span = document.getElementById("page-num").innerText;
-
+        const span = document.getElementById("page-num").innerText
+        const nextPage = parseInt(span) + 1 <= 6 ? parseInt(span) + 1 : 1
+        document.querySelector('#next-page-button').href = `https://виаграушлаиз.рф/page/${nextPage}`
         document.querySelector(`a[data-url='${span}']`).classList.add("posts-active-link")
     </script>
 </div>

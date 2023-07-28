@@ -1,0 +1,20 @@
+.next-page__wrapper {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.next-page__button {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid #FF5D02;
+    text-transform: uppercase;
+    color: white;
+    font-family: "loos-extended", sans-serif;
+    width: 275px;
+    margin: 0 auto;
+    line-height: 46px;
+    font-size: 20px;
+    border-radius: 8px;
+}
